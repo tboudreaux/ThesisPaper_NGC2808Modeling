@@ -11,13 +11,13 @@ When fitting isochrones to the data we have four main critera for any method
 
 While there are many packages which can measure fiducial lines very well
 {\color{red}[CITATIONS]}, we do not belive that any of these perfectly match
-our use case. Therefore, we elect to develope our own software suite,
-\fidanka. \fidanka is a python package designed to automate
-much of the process of measuring fiducual lines in CMDs, adhearing to the four
-criteria we lay out above. Primary features of \fidanka may be seperated into
-two categories: stellar population synthethis and isochrone
-optimization/fitting (distance modulus, B-V color excess, and binpary mass
-fraction)
+our use case. Therefore, we elect to develope our own software suite, \fidanka.
+\fidanka is a python package designed to automate much of the process of
+measuring fiducual lines in CMDs, adhearing to the four criteria we lay out
+above. Primary features of \fidanka may be seperated into three primary
+categories: fiducual line measurment, stellar population synthethis, and
+isochrone optimization/fitting. Additionally, there are utility functions which
+are detailed in the \fidanka documentation.
 
 \subsection{Fiducual Line Measurment}
 \fidanka takes a interative approach to measuring fiducial lines, the first
@@ -103,12 +103,23 @@ corrections. An arbitrarily large number of isochrones may be used to define an
 arbitrary number of populations. Synthetic stars are samples from each
 isochroner based on a definiable probability (for example it is belived that
 $\sim90\%$ of stars in globular clusters are younger population
-{\color{red}[CITATION]). Based on the metallicity, $\mu$, and E(B-V) of each
-isochrone, bolometric corrections are taken from bolometric correction
-tables. Where bolometric correction tables do not include exact metallicities
-or extinctions a linear interpolation is preformed between the two bounding
+{\color{red}[CITATION]}). Based on the metallicity, $\mu$, and E(B-V) of each
+isochrone, bolometric corrections are taken from bolometric correction tables.
+Where bolometric correction tables do not include exact metallicities or
+extinctions a linear interpolation is preformed between the two bounding
 values. {\color{red}[FIGURE]} shows an example of a synthetic CMD generated
-from a set of 2 NGC 2808 isochrones as well as a comparison between those isochrones and
-the measured fiducual line of the synthetic population.
+from a set of 2 NGC 2808 isochrones as well as a comparison between those
+isochrones and the measured fiducual line of the synthetic population.
+
+\subsection{Isochrone Optimization}
+The optimization routines in \fidanka will find the best fit distance modulus,
+B-V color excess, and binary number fraction for a given set of isochrones. If
+a single isochrone is provided then the optimization is done by mimizing the
+$\chi^2$ of the perpendicular distnaces between an isochrone and a fiducual
+line. If multiple isochrones are provided then those isochrones are first used
+to run stellar population synthethis and generate a synthetic CMD. The
+optimization is then done by mimizing the $\chi^2$ of both the perpendicular
+distnaces between and widths of the observed fiducual line and the fiducual
+line of the synthetic CMD.
 
 
