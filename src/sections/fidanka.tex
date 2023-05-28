@@ -1,0 +1,114 @@
+\section{fidanka}\label{sec:fidanka}
+When fitting isochrones to the data we have four main critera for any method
+
+\begin{itemize}
+	\item The method must be robust enough to work along the entire main sequence, turn off, and much of the subgian and red giant branchs.
+	\item Any method should consider photometric uncertanity in the fitting process.
+	\item The method should be model independent, weighting any n number of populations equally.
+	\item The method should be automated and require minimal intervention from the user.
+\end{itemize}
+
+
+While there are many packages which can measure fiducial lines very well
+{\color{red}[CITATIONS]}, we do not belive that any of these perfectly match
+our use case. Therefore, we elect to develope our own software suite,
+\fidanka. \fidanka is a python package designed to automate
+much of the process of measuring fiducual lines in CMDs, adhearing to the four
+criteria we lay out above. Primary features of \fidanka may be seperated into
+two categories: stellar population synthethis and isochrone
+optimization/fitting (distance modulus, B-V color excess, and binpary mass
+fraction)
+
+\subsection{Fiducual Line Measurment}
+\fidanka takes a interative approach to measuring fiducial lines, the first
+step of which is to make a ``guess'' as to the fiducial line. This guess will
+be used to verticalize the CMD so that further alorithms can work in 1-D
+magnitude bins without worrying about weighting issues caused by varying
+projections of the evolutionary sequence onto the magnitude axis. This initial
+guess is calculated by splitting the CMD into magnitude bins, with uniform
+numbers of stars per bin (so that bins are cover a small magnitude range over
+densly populated regions of the CMD while covering a much larger mangnitude
+range in sparsly populated regions of the CMD, such as the RGB). A unimodal
+gaussian distribution is then fit to the color distribution of each bin, and
+the resulting mean color is used as thec initial fiducial line guess. This
+rough fiducual line will approximatly trace the area of highest density. We
+subtract the color of this fiducual line from that of each star to verticalize
+the CMD. 
+
+If \fidanka were to simply apply the same algorithm to the verticalized CMD
+then the resulting fiducial line would simply be a re-extraction of the initial
+fiducial line. To avoid this, we take a more robust, number density based
+approach, which considers the distribution of stars in both color and magnitude
+space simultaniously. For each star in the CMD we first using a
+\texttt{introselect} partitioning algorithm to select the 50th nearest stars.
+To account for the case where the star is at an extreme edge of the CMD, those
+50 stars include the star itself (such that we really select 49 stars + 1). We
+use \texttt{qhull}\footnote{https://www.qhull.com}\citep{Barber1996, } to
+calculate the convex hull of those 50 points. The number density at each star
+then is defined as 50/(area of convex hull). Because we use a fixed number of
+points per star, and a partitioning algorithm as opposed to a sorting
+algorithm, this method scales like $\mathcal{O}(n)$, where n is the number of
+stars in the CMD. It also intrinsically weights the density of of each star
+equally as the counting statistics of per convex are uniform. We are left with a
+CMD where each star has a defined number density {\color{red}[FIGURE]}.
+
+We can adapt this density map method to consider photometric uncertanties by
+adopting a simple monte carlo approach. For each star in the CMD we draw a
+random magnitude shift from a gaussian distribution with a standard deviation
+equal to the photometric uncertanty of the star in each filter. We then shift
+each star by this random amount and calculate the density map as before. We
+repeat this process $m$ times, and then take the median density at each point
+in the CMD {\color{red}[FIGURE]}. This method will result in noisy density
+peaks with charectaristic width less than that of the photometric noise
+smoothing out; while wider peaks will remain.
+
+\fidanka can now exploit this density map to fit a better fiducual line to the
+data, as the densiy map is far more robust to outlies. There are multiple
+algorithms we impliment to fit the fiducial line to the color density profile
+in each magnitude bin; they are explained in more detail in the \fidanka
+documentation. However, of most relevance here is the A* path finding heuristic
+over peaks. Peaks are extracted from the The color-density profile in at
+density bin {\color{red}[FIGURE]}. The A* heuristic is then used to find an
+optimal path (though not neccesarily {\em the} optimal path) through the peaks
+{\color{red}[FIGURE]}. The resulting path is then used as the fiducial line
+{\color{red}[FIGURE]}. The heursitc considers the slope of the path from one
+bin to the next and simultaniously the change in density from one bin to the
+next. This allows the path to be robust to both steep slopes and low density
+regions. Due to the heuristic the fiducial line path  is not neccesarily the
+vertical line defined by the initial fiducial line guess and will instead be a
+more optimized/better guess.
+
+This method of fiducial line extraction is very effective at tracing the
+meandian ridge line of the overall CMD; however, it struggles to discriminate
+between multiple populations. The density variations from one population to the
+next are often too subtle. Moreover, when sampling the density. Moreover, the
+spacing between main sequence populations may be of a similar order to the
+photmetric uncertantities, and therefor the indivudual populations may smear
+into one and other. For these reasons, \fidanka does not attempt to extract
+multiple unique fiducuial lines for each population; instead, it measures the
+width of the overall sequence. Width measurment again makes use of the
+color-density pofile, selecting defining the width as the difference in color
+between the 5th and 95th percentile of the density {\color{red}[FIGURE]}.
+
+\subsection{Stellar Population Synthethis}
+In addition to measuring fiducial lines, \fidanka also includes a stellar
+population synthethis module. This module is used to generate synthetic CMDs
+from a given set of isochrones. This is of primary importance for binary
+population modelling. The module is also used to generate synthetic CMDs for
+the purpose of testing the fiducial line extraction algorithms against priors.
+
+\fidanka uses MIST formated isochrones {\color{red}[CITATION]} as input along
+with distance modulus, B-V color excess, binary mass fraction, and bolometric
+corrections. An arbitrarily large number of isochrones may be used to define an
+arbitrary number of populations. Synthetic stars are samples from each
+isochroner based on a definiable probability (for example it is belived that
+$\sim90\%$ of stars in globular clusters are younger population
+{\color{red}[CITATION]). Based on the metallicity, $\mu$, and E(B-V) of each
+isochrone, bolometric corrections are taken from bolometric correction
+tables. Where bolometric correction tables do not include exact metallicities
+or extinctions a linear interpolation is preformed between the two bounding
+values. {\color{red}[FIGURE]} shows an example of a synthetic CMD generated
+from a set of 2 NGC 2808 isochrones as well as a comparison between those isochrones and
+the measured fiducual line of the synthetic population.
+
+
