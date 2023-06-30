@@ -1,36 +1,23 @@
-\section{Modeling}\label{sec:modeling}
-One key element of NGC 2808 modeling is the incorporation of new atmospheric
-models, generated from the \texttt{MARCS} grid of model atmospheres \citep{Plez2008},
-which match interior elemental abundances. \texttt{MARCS} provides one-dimensional,
-hydrostatic, plane-parallel and spherical LTE atmopsheric models
-\citep{Gustafsson2008}. Members of our collaboration have generated atmospheric 
-models for populations A and E.  Integration of these new model atmospheres
-into DSEP is ongoing. 
+\section{Stellar Models}\label{sec:modeling}
+We use the Dartmouth Stellar Evolution Program \citep[DSEP, ][]{Dotter2008} to
+generate stellar models. DSEP is a well-tested, one-dimensional stellar
+evolution code which includes a mixing length model of convection,
+gravitational settling, and diffusion.
 
-For similar reasons as discussed in \S\ref{sec:p1} we conduct this research
-with OPLIB high-temperature opacity tables as opposed to OPAL tables. We will
-also generate low temperature opacity tables using the \texttt{MARCS}.
-Moreover, we confirm that the atmosphere and structure meet in an optically
-thick region of the star by shifting the atmospheric fitting point from an optical
-depth of $\tau = 2/3$ (used by DSEP currently for \texttt{PHOENIX} model atmospheres) to
-some higher $\tau$. We will experiment to identify the best optical depth to
-fit at.. 
+We use DSEP to evolve stellar models ranging in mass from 0.3 to 2.0 solar
+masses from the zero-age main sequence (ZAMS) to the tip of the red giant
+branch. Below 0.7 $M_{\odot}$ we evolve a model every 0.03 $M_{\odot}$ and
+above 0.7 $M_{\odot}$ we evolve a model every 0.5 $M_{\odot}$. Additionally, we
+evolve models over a grid of mixing length parameters, $\alpha_{MLT}$, from
+$\alpha_{MLT} = 1.0$ to $\alpha_{MLT} = 2.0$ in steps of 0.1. In addition to the
+mixing length grid the evolved grid of models also has dimensions population (A
+or E) and helium abundance ($Y$). Each model is evolved in DSEP's ``high
+resolution'' mode and had a maximum allowed time step of 50 Myr. 
 
-These population have been studied in depth by Feiden and their chemical
-compositions were determined in \citet{Milone2015} (see Table 2 in that paper).
-While we cannot yet evolve DSEP models with these new boundary conditions, we
-can make a first pass investigation of the affect of OPLIB opacities (Figure
-\ref{fig:NGC2808ISO}). Note how the models generated using OPLIB opacity tables
-have a systematically lower luminosity. This discrepancy is consistent with
-the overall lower opacities of the OPLIB tables. 
+For each combination of population, $Y$, and $\alpha_{MLT}$ we use the
+isochrone generation code first presented in \citet{Dotter2016} to generate a
+grid of isochrones. The isochrone generation code identified equivalent
+evolutionary points (EEPs) over a series of masses and interpolates between
+them. {\color{blue} The grid of isochrones generated for this work is avalible
+as a digital supplement to this paper.}
 
-
-The isochrones generally used to infer the degree of helium enhancements assume that
-convection operates in the same manner in metal-poor stars as it does in the
-Sun. However, observations from \textit{Kepler} of metal-poor red giants
-\citep{Bonaca2012, tayar2017correlation}, in concert with interferometric
-radius determination of the metal-poor sub-giant HD 140283
-\citep{creevey2015benchmark}, have shown that the efficiency of convection
-changes with iron content. As the final portion of our work to more carefully
-handle a star's chemistry, we will modify DSEP to capture this variation in
-convective efficiency. 
