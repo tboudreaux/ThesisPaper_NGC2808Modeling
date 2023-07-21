@@ -179,9 +179,10 @@ line of the synthetic CMD.
 
 
 \subsection{Fidanka Testing}
-In order to validate fidanka we have run a series of tests on synthetic CMDs
-generated from NGC 2808 isochrones. For each test we use fidanka to both build
-a synthetic population and then measure the fiducial line of that population.
-The measured fiducial lines(s) are then compared to the underlying isochrones
-used.
-
+In order to validate fidanka we have run an series of injection recovery tests
+using \fidanka's population synthesis routines to build various synthetic
+populations and \fidanka's fiducial measurement routines to recover these
+populations. We run multiple tests in order to validate \fidanka's ability to
+extract varying numbers of populations without the prior of the exact population
+number. Table \ref{tab:fidankaTests} provides the parameters for each injection recovery
+test along with the $\chi^{2}$ difference between each isochrone and its associated fiducial line.
