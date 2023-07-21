@@ -186,3 +186,15 @@ populations. We run multiple tests in order to validate \fidanka's ability to
 extract varying numbers of populations without the prior of the exact population
 number. Table \ref{tab:fidankaTests} provides the parameters for each injection recovery
 test along with the $\chi^{2}$ difference between each isochrone and its associated fiducial line.
+
+Each population was generated using either a salpeter initial mass function \citep{Salpeter1955} or the initial mass function given in \citep{Milone2012} ($\alpha=-1.2$ redmost population and $\alpha=-0.9$ for the bluemost and second bluemost populations). Every population was assumed to have a binary population fraction of 10\%, to have a distance of 0pc and to have a B-V color excess of 0. Finally, each synthetic population was generated using a fixedf age of 12 Gyr.
+
+\begin{table}
+\end{table}
+
+The top panel Figure \ref{} shows the populations generated for these tests. while the bottom panel shows the populations with the density variations highlighted. 
+
+We measure the fiducial lines in these populations using \fidanka's fiducial measurment utility. For the same
+reasons as outlines in Section \ref{} we use the F275W and F814W filters. A maximum population number is set at 5 for each trial. Figure \ref{} shows the fiducual lines on top of each synthethic population. Recall from Section \ref{} that use of Baysian Gaussian Mixture Modeling (BGMM) allows us to predict the optimal number of populations to recreate a distribution; therefore, where you see a single line BGMM has predicted only one population is needed whereas when you see 2 lines BGMM has preicted that 2 populations are needed. Importantly, these population numbers are not hard coded into our injection and recovery tests.
+
+The efficacy of the fiducual measurment it evaluated by calculating the $\chi^{2}$ metric between the fiducial line and isochrone over 0.1 mag bins. This allows us to probe which portions of the evolutionary sequence contribute most to the overall $\chi^{2}$ difference (Figure \ref{}).
