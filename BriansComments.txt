@@ -1,0 +1,21 @@
+1. The abstract is too long and contains too much background information.  It
+needs to focus on the results presented in this paper. [partial]
+2. End of the introduction, it is important to note that we are modeling the
+photometry (and looking for multiple populations in the photometry). [okay]
+3.  Start of Section 2 - you need to introduce DSEP.  Also need that in the first sentence you need to say chemically consistent. [okay]
+4. Section 2.1 — the key assumption we make is that the radiation is in
+thermodynamic equilibrium (and so is described as a blackbody) and energy
+transport by radiation is diffusive. For a citation, any textbook is fine (e.g.
+Salaris & Cassisi, ‘Evolution of Stars and Stellar Populations’,  2005. (pages
+52-54). [okay]
+5. We can ask Greg to add in more details on the model atmospheres; don’t worry
+about this now [okay]
+6. You should include the actual abundances used to model populations A & E as
+a table (and include a citation to the spectroscopic work).
+7. Figures 2 and 3 are not referenced in the text (or I just missed it).  YOu
+need to include a brief discussion and citation to the photometry that you are
+using. [broken fig reference, fix]
+8. What is ‘pi’ that is on the right axis of Figure 4?
+9. Start of Section 5: Before doing the isochrone fitting, you need to justify
+why we are only fitting 2 populations (ie: discuss the Findanka results to the
+HUGS photometry
