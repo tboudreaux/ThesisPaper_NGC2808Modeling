@@ -11,10 +11,99 @@ above 0.7 $M_{\odot}$ we evolve a model every 0.5 $M_{\odot}$. Additionally, we
 evolve models over a grid of mixing length parameters, $\alpha_{MLT}$, from
 $\alpha_{MLT} = 1.0$ to $\alpha_{MLT} = 2.0$ in steps of 0.1. In addition to the
 mixing length grid the evolved grid of models also has dimensions population (A
-or E) and helium abundance ($Y$). Each model is evolved in DSEP's ``high
+or E) (Table \ref{tab:comp}) and helium abundance ($Y=0.24, 0.27, 0.3, 0.33, 0.36, 0.39$). Each model is evolved in DSEP's ``high
 resolution'' mode and had a maximum allowed time step of 50 Myr. 
 
-{\color{blue} Table here of the abundances of population A and E, cite \citep{Milone2015}. These should be presented as a(H)=12, and so on correct?}
+\begin{deluxetable}{c|cc||c|cc}\label{tab:comp}
+
+%% Keep a portrait orientation
+
+%% Over-ride the default font size
+%% Use Default (12pt)
+
+%% Use \tablewidth{?pt} to over-ride the default table width.
+%% If you are unhappy with the default look at the end of the
+%% *.log file to see what the default was set at before adjusting
+%% this value.
+
+%% This is the title of the table.
+\tablecaption{Population Composition}
+
+%% This command over-rides LaTeX's natural table count
+%% and replaces it with this number.  LaTeX will increment 
+%% all other tables after this table based on this number
+\tablenum{1}
+
+%% The \tablehead gives provides the column headers.  It
+%% is currently set up so that the column labels are on the
+%% top line and the units surrounded by ()s are in the 
+%% bottom line.  You may add more header information by writing
+%% another line between these lines. For each column that requries
+%% extra information be sure to include a \colhead{text} command
+%% and remember to end any extra lines with \\ and include the 
+%% correct number of &s.
+  \tablehead{\colhead{Element} & \colhead{Pop A} & \colhead{Pop E} & \colhead{Element} & \colhead{Pop A} & \colhead{Pop E} 
+} 
+
+%% All data must appear between the \startdata and \enddata commands
+\startdata
+Li & -0.08 & --- & In & -1.46 & --- \\
+Be & 0.25 & --- & Sn & -0.22 & --- \\
+B & 1.57 & --- & Sb & -1.25 & --- \\
+C & 6.87 & 5.91 & Te & -0.08 & --- \\
+N & 6.42 & 6.69 & I & -0.71 & --- \\
+O & 7.87 & 6.91 & Xe & -0.02 & --- \\
+F & 3.43 & --- & Cs & -1.18 & --- \\
+Ne & 7.12 & 6.7 & Ba & 1.05 & --- \\
+Na & 5.11 & 5.7 & La & -0.03 & --- \\
+Mg & 6.86 & 6.42 & Ce & 0.45 & --- \\
+Al & 5.21 & 6.61 & Pr & -1.54 & --- \\
+Si & 6.65 & 6.77 & Nd & 0.29 & --- \\
+P & 4.28 & --- & Pm & -99.0 & --- \\
+S & 6.31 & 5.89 & Sm & -1.3 & --- \\
+Cl & -1.13 & 4.37 & Eu & -0.61 & --- \\
+Ar & 5.59 & 5.17 & Gd & -1.19 & --- \\
+K & 3.9 & --- & Tb & -1.96 & --- \\
+Ca & 5.21 & --- & Dy & -1.16 & --- \\
+Sc & 2.02 & --- & Ho & -1.78 & --- \\
+Ti & 3.82 & --- & Er & -1.34 & --- \\
+V & 2.8 & --- & Tm & -2.16 & --- \\
+Cr & 4.51 & --- & Yb & -1.42 & --- \\
+Mn & 4.3 & --- & Lu & -2.16 & --- \\
+Fe & 6.37 & --- & Hf & -1.41 & --- \\
+Co & 3.86 & --- & Ta & -2.38 & --- \\
+Ni & 5.09 & --- & W & -1.41 & --- \\
+Cu & 3.06 & --- & Re & -2.0 & --- \\
+Zn & 2.3 & --- & Os & -0.86 & --- \\
+Ga & 0.78 & --- & Ir & -0.88 & --- \\
+Ge & 1.39 & --- & Pt & -0.64 & --- \\
+As & 0.04 & --- & Au & -1.34 & --- \\
+Se & 1.08 & --- & Hg & -1.09 & --- \\
+Br & 0.28 & --- & Tl & -1.36 & --- \\
+Kr & 0.99 & --- & Pb & -0.51 & --- \\
+Rb & 0.26 & --- & Bi & -1.61 & --- \\
+Sr & 0.61 & --- & Po & -99.0 & --- \\
+Y & 1.08 & --- & At & -99.0 & --- \\
+Zr & 1.45 & --- & Rn & -99.0 & --- \\
+Nb & -0.8 & --- & Fr & -99.0 & --- \\
+Mo & -0.38 & --- & Ra & -99.0 & --- \\
+Tc & -99.0 & --- & Ac & -99.0 & --- \\
+Ru & -0.51 & --- & Th & -2.2 & --- \\
+Rh & -1.35 & --- & Pa & -99.0 & --- \\
+Pd & -0.69 & --- & U & -2.8 & --- \\
+\enddata
+
+%% Include any \tablenotetext{key}{text}, \tablerefs{ref list},
+%% or \tablecomments{text} between the \enddata and 
+%% \end{deluxetable} commands
+
+%% General table comment marker
+\tablecomments{Relative Metal composition used where a(H) = 12. Where the relative composition is the the same for both populations A and E it is only listed in the population A colum for the sake of visual clarity.}
+
+%% General table references marker
+\tablerefs{\citet{Milone2015}}
+
+\end{deluxetable}
 
 For each combination of population, $Y$, and $\alpha_{MLT}$ we use the
 isochrone generation code first presented in \citet{Dotter2016} to generate a

@@ -13,7 +13,7 @@ We do not believe that any currently available software is a match for
 our use case. Therefore, we elect to develop our own software suite, \fidanka.
 \fidanka is a python package designed to automate much of the process of
 measuring fiducial lines in CMDs, adhering to the four criteria we lay out
-above. Primary features of \fidanka may be separated into three primary
+above. Primary features of \fidanka may be separated into three
 categories: fiducial line measurement, stellar population synthesise, and
 isochrone optimization/fitting. Additionally, there are utility functions which
 are detailed in the \fidanka documentation.
@@ -86,13 +86,12 @@ belonging strongly to a single distribution is maximized.
 
 Maximization is preformed using the Dirichlet process, which is a
 non-parametric Bayesian method of determining the number of Gaussian distributions, $K$,
-which best fit the data {\color{red}[CITATION]}. Use of the Dirichlet process
+which best fit the data \citep{Ferguson1973, scikit-learn}. Use of the Dirichlet process
 allows for dynamic variation in the number of inferred populations from
 magnitude bin to magnitude bin. Specifically, populations are clearly visually
 separated from the lower main sequence through the turn off; however, at the
 turn off and throughout much of the subgiant branch, the two visible
-populations overlap due to their extremely similar ages ({\color{red}
-Citation}). The Dirichlet process allows for the BGMM method to infer a single
+populations overlap due to their extremely similar ages \citep[i.e.][]{Jordan2002}. The Dirichlet process allows for the BGMM method to infer a single
 population in these regions, while inferring two populations in regions where
 they are clearly separated. More generally, the use of the Dirichlet process
 removes the need for a prior on the exact number of populations to fit. Rather,
@@ -152,7 +151,7 @@ from a given set of isochrones. This is of primary importance for binary
 population modelling. The module is also used to generate synthetic CMDs for
 the purpose of testing the fiducial line extraction algorithms against priors.
 
-\fidanka uses MIST formatted isochrones {\color{red}[CITATION]} as input along
+\fidanka uses MIST formatted isochrones \citep{Dotter2016} as input along
 with distance modulus, B-V color excess, binary mass fraction, and bolometric
 corrections. An arbitrarily large number of isochrones may be used to define an
 arbitrary number of populations. Synthetic stars are samples from each
