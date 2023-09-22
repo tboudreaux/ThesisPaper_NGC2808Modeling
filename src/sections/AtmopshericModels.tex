@@ -20,15 +20,18 @@ conditions are not updated as as light-element interior abundance varies.
 
 One key element when chemically consistently modeling NGC 2808 modeling is the
 incorporation of new atmospheric models with the same elemental abundances as
-the structure code. We use atmospheres generated from the \texttt{MARCS} grid of
-model atmospheres \citep{Plez2008}. \texttt{MARCS} provides one-dimensional,
+the structure code. We use atmospheres generated from the \texttt{MARCS} grid
+of model atmospheres \citep{Plez2008}. \texttt{MARCS} provides one-dimensional,
 hydrostatic, plane-parallel and spherical LTE atmospheric models
 \citep{Gustafsson2008}. Model atmospheres are made to match the
 spectroscopically measured elemental abundances of populations A and E.
 Moreover, for each populations, atmospheres with  various helium mass fractions
-are generated. These range from Y=0.24 to Y=0.36 in steps of 0.02. A comparison
-of the pressure and temperature throughout the atmospheres of the two
-populations with helium abundances representative of literature values is shown
+are generated. These range from Y=0.24 to Y=0.36 in steps of 0.02. All
+atmospehric models are computed to an optical depth of $\tau = 100$ where their
+temperature and pressures serves as boundary conditions for the strudcure code.
+A comparison of the pressure and temperature throughout the atmospheres of the
+two populations with helium abundances representative of literature values is
+shown
 in Figure \ref{fig:AEAtmComp}.
 
 \begin{figure}

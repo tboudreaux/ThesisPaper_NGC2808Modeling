@@ -2,17 +2,22 @@
 We use the Dartmouth Stellar Evolution Program \citep[DSEP, ][]{Dotter2008} to
 generate stellar models. DSEP is a well-tested, one-dimensional stellar
 evolution code which includes a mixing length model of convection,
-gravitational settling, and diffusion.
+gravitational settling, and diffusion. Using the solar composition presented in
+\citep{Grevesse2007} (GAS07), MARCS model atmosphers, OPLIB high temperature
+opacities, and AESOPUS 2.0 low temperautre opacities we find a solar calibrated
+mixing length parameter, $\alpha_{MLT}$, of $\alpha_{MLT} = 1.901$.
 
 We use DSEP to evolve stellar models ranging in mass from 0.3 to 2.0 solar
 masses from the zero-age main sequence (ZAMS) to the tip of the red giant
 branch. Below 0.7 $M_{\odot}$ we evolve a model every 0.03 $M_{\odot}$ and
 above 0.7 $M_{\odot}$ we evolve a model every 0.5 $M_{\odot}$. Additionally, we
-evolve models over a grid of mixing length parameters, $\alpha_{MLT}$, from
-$\alpha_{MLT} = 1.0$ to $\alpha_{MLT} = 2.0$ in steps of 0.1. In addition to the
-mixing length grid the evolved grid of models also has dimensions population (A
-or E) (Table \ref{tab:comp}) and helium abundance ($Y=0.24, 0.27, 0.3, 0.33, 0.36, 0.39$). Each model is evolved in DSEP's ``high
-resolution'' mode and had a maximum allowed time step of 50 Myr. 
+evolve models over a grid of mixing length parameters from $\alpha_{MLT} = 1.0$
+to $\alpha_{MLT} = 2.0$ in steps of 0.1. In addition to the mixing length grid
+the evolved grid of models also has dimensions population (A or E) (Table
+\ref{tab:comp}) and helium abundance ($Y=0.24, 0.27, 0.3, 0.33, 0.36, 0.39$).
+Each model is evolved in DSEP with typical numeric tolerences of one part in
+{\color{red}WHAT}, and an average of {\color{red} WHAT} shells. Each model is
+allowed a maximum time step of 50 Myr. 
 
 \begin{deluxetable}{c|cc||c|cc}\label{tab:comp}
 
@@ -109,6 +114,10 @@ For each combination of population, $Y$, and $\alpha_{MLT}$ we use the
 isochrone generation code first presented in \citet{Dotter2016} to generate a
 grid of isochrones. The isochrone generation code identified equivalent
 evolutionary points (EEPs) over a series of masses and interpolates between
-them. {\color{blue} The grid of isochrones generated for this work is avalible
-as a digital supplement to this paper.}
+them. The grid of isochrones generated for this work is avalible as a digital
+supplement to this paper. Given the complexity of the parameter space when
+fitting multiple populations along with the recent warnings in the liteerature
+regarding overfitting datasets \citep[e.g. ][]{Valle2022} we want to develop a
+more objective way of fitting isochrones to photometry than if we were to mark
+median ridge line positions by hand.
 

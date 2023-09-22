@@ -1,0 +1,71 @@
+- For Figure 5, I would just use \delta (F275W - F814W) and then explain in the
+  figure legend that you are plotted the difference in color between the
+  fiducial and the data.  For Figure 7, what are the colored lines on the left
+  plot?  I think instead of perpendicular distance, the right plot in Figure 7
+  should just show the difference in color, as you state in Figure 5.2 that the
+  is an offset of 0.026 mag in F814W.  I am recalling  that the F606W
+  magnitudes generally agree; correct me if I am wrong.
+
+- Abstract — this should focus on the results that are presented in this paper,
+  and do not need to include an introduction.  Thus, you can remove most of the
+  first part of the abstract, and focus on the methods you used in this paper
+  and the results that were obtained.  this would include discussing Findanka. [x]
+
+- Line 56:  Do MPs really show up in the B filter?  I saw lots of B-V GC CMDs
+  in the 1990s and none of them showed evidence for MPs.
+
+- near the end of the introduction:  When you mention NGC 2808, you should
+  discuss the photometry that we are using in this paper in a bit more detail.
+  I am not exactly sure where, but at some point you also need to discuss what
+  filters you elected to compare to our models. [x]
+
+- Section 2.1:  You should discuss at what optical depth you match to theL
+  surface boundary conditions.  You can also mention this in the caption to
+  Figure 1. [x]
+
+- Section 3, first paragraph: Usually, I mention the value of a solar
+  calibrated mixing length (as there are many variations on exactly what flavor
+  of mixing length are used in stellar interior codes),  However, I guess that
+  you don’t have MARCS atmospheres for a solar composition?  If so, have you
+  run a solar calibrated models with PHOENIX model atmospheres + OPLIB +
+  AESOPUS-2.0?   Finally, instead of saying ‘high resolution mode’ you can
+  mention the typical numerical tolerances which are used to solve the stellar
+  structure equations, and the typical number of shells in a main sequence
+  model. [x]
+
+- End of Section 3:  You should have a transition sentence to the next section
+  — basically telling the reader that you want to objectively determine which
+  isochrones provide the best match to the photometry. [x]
+
+- Line 291:  When you say ‘50th nearest stars’ I assume you mean in CMD space?
+  You should define the distance that you are using in the text. [x]
+
+- Figure 3:  I do not understand what you mean by “Lines show the density-color
+  profile in each magnitude bin.” in the figure capture.  Please elaborate.
+
+- Figure 4:  I am a bit confused by this figure; the joint distribution has
+  fairly large ‘wings’ which I do not see in the individual components.  Can
+  you explain? [the explination here is that BGMM modeling always fits a series of joint distributions ]
+
+- End of section 4.1:  You need to explicitly state that you find photometric
+  evidence for 2 populations in NGC 2808 when using your objective criteria,
+  At this point, you can also discuss how this compares to what has been found
+  previously in the literature (using ‘by eye’ methods) and also what people
+  have found when looking at the spectroscopic  data.
+
+- Section 4.4 needs to be fleshed out quite a bit more before sending to Greg.
+  (ie: include your figure and tables, etc. ).  You also need to summarize the
+  results of this tests — does Fidanka do a good job? [x]
+
+- Section 5:  You need to provide more details — what exactly are the
+  parameters of your best fitting isochrones, and provide numbers when
+  comparing to previous work.
+
+- Section 5.1:  Since the 0.02 mag offset is only showing up in 1 filter, in
+  addition to the distance modulus (line 505) this could also affect the
+  reddening value you find for the best fit isochrones.
+
+- For your paper, you should also discuss how your helium abundances compare to
+  what is found in the following:
+  https://ui.adsabs.harvard.edu/abs/2018MNRAS.481.5098M/abstract
+

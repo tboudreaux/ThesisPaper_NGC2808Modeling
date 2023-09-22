@@ -34,27 +34,48 @@
 
 
 \begin{abstract}
-	Globular Clusters (GCs) provide a unique astrophysical laboratory for
-	studying the formation and evolution of stars. GCs are old, dense, and it
-	has historically been believed that they have a single stellar population. However, in the
-	last two decades, it has been definitively shown that most if not all Milky
-	Way GCs have multiple stellar populations (MPs). These MPs are chemically
-	distinct from one another, primarily separated by light element, including helium, abundance
-	variations without the standard accompanying heavy element abundance
-	variations. As the precise formation channel of these MPs remains
-	an open question, and one which is sensitive to the population - population
-	compositional differences, the extent of the composition
-	variations between MPs is a key parameter to constrain. Many metal abundances may be
-	directly measured spectroscopically; however, helium abundances are not
-	directly observable in GCs. Instead, helium abundances are inferred from
-	stellar models. It is therefore important to understand build stellar
-	models that are self-consistent in the compositions of the structure,
-	atmosphere, and opacity. In this work we present the first chemically
-	self-consistent stellar models of the Milky Way Globular Cluster NGC 2808 using MARCS model atmospheres, OPLIB high-temperature radiative opacities, and AESOPUS low-temperature radiative opacities.
-	We find that the helium abundance of the second generation of stars is
-	higher than the first generation by {\color{red} SOME AMOUNT}.
-	{\color{blue} This is in agreement with previous studies of NGC 2808.}
+  The Helium abundances in the multiple populations which are now known to
+  comprise all closley studies Milky Way globular clusters are often inferred
+  by fitting isochohrones generated from from stellar evolutionary models to
+  globular cluster photometry. It is therefore important to understand build
+  stellar models that are chemically self-consistent in the compositions of the
+  structure, atmosphere, and opacity. In this work we present the first
+  chemically self-consistent stellar models of the Milky Way Globular Cluster
+  NGC 2808 using MARCS model atmospheres, OPLIB high-temperature radiative
+  opacities, and AESOPUS low-temperature radiative opacities. In order to to
+  this we develope a robust software suite for globular cluster photometry,
+  \fidanka, which can be used for both population synthethis as well as
+  isochrone optimization. \fidanka's primary goal is to determine, in a
+  relativly unbiased way, the ideal number of populations within photometric
+  dataset to fit isochrones to. We achive this through a combinarion of Baysian
+  Guassian Mixture Modeling and a novel number density estimation algorithm.
+  Using \fidanka and F275W-F814W photometry from the Hubble UV Globular Cluster
+  Survey we find that the helium abundance of the second generation of stars in
+  NGC 2808 is higher than the first generation by $15\pm3\%$. This is in
+  agreement with previous studies of NGC 2808.
 \end{abstract}
+% \begin{abstract}
+% 	Globular Clusters (GCs) provide a unique astrophysical laboratory for
+% 	studying the formation and evolution of stars. GCs are old, dense, and it
+% 	has historically been believed that they have a single stellar population. However, in the
+% 	last two decades, it has been definitively shown that most if not all Milky
+% 	Way GCs have multiple stellar populations (MPs). These MPs are chemically
+% 	distinct from one another, primarily separated by light element, including helium, abundance
+% 	variations without the standard accompanying heavy element abundance
+% 	variations. As the precise formation channel of these MPs remains
+% 	an open question, and one which is sensitive to the population - population
+% 	compositional differences, the extent of the composition
+% 	variations between MPs is a key parameter to constrain. Many metal abundances may be
+% 	directly measured spectroscopically; however, helium abundances are not
+% 	directly observable in GCs. Instead, helium abundances are inferred from
+% 	stellar models. It is therefore important to understand build stellar
+% 	models that are self-consistent in the compositions of the structure,
+% 	atmosphere, and opacity. In this work we present the first chemically
+% 	self-consistent stellar models of the Milky Way Globular Cluster NGC 2808 using MARCS model atmospheres, OPLIB high-temperature radiative opacities, and AESOPUS low-temperature radiative opacities.
+% 	We find that the helium abundance of the second generation of stars is
+% 	higher than the first generation by {\color{red} SOME AMOUNT}.
+% 	{\color{blue} This is in agreement with previous studies of NGC 2808.}
+% \end{abstract}
 
 \keywords{Globular Clusters (656), Stellar evolutionary models (2046)}
 
@@ -68,7 +89,7 @@
 
 \input{src/sections/fitting.tex}
 
-\input{src/sections/results.tex}
+% \input{src/sections/results.tex}
 
 % \input{src/sections/discussion.tex}
 
