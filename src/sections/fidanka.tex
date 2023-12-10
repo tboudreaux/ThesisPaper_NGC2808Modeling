@@ -53,24 +53,24 @@ as opposed to a sorting algorithm, this method scales like $\mathcal{O}(n)$,
 where n is the number of stars in the CMD. This method also intrinsically
 weights the density of of each star equally as the counting statistics per bin
 are uniform. We are left with a CMD where each star has a defined number
-density (Figure \ref{fig:densityMapDemo}).
+density (Figure \ref{densityMapDemo}).
 
 \begin{figure*}
 	\centering
 	\includegraphics[width=0.9\textwidth]{src/figures/notebookFigures/DensityMapDemo.png}
-	\label{fig:densityMapDemo}
 	\caption{Density map demo showing density estimate over different parts of
 	the evolutionary sequence. The left panel shows the density map over the
 	entire evolutionary sequence, while the middle panel shows the density map
 	over the main sequence and the right most panel shows the density map over
 	the RGB. Figures in the top row are the raw CMD, while figures in the
 	bottom row are colored by the density map.}
+	\label{densityMapDemo}
 \end{figure*}
 
 \fidanka can now exploit this density map to fit a better fiducial line to the
 data, as the density map is far more robust to outliers. There are multiple
 algorithms we implement to fit the fiducial line to the color-density profile
-in each magnitude bin (Figure \ref{fig:densityBinsDemo}); they are explained in
+in each magnitude bin (Figure \ref{densityBinsDemo}); they are explained in
 more detail in the \fidanka documentation. However, of most relevance here is
 the Bayesian Gaussian Mixture Modeling (BGMM) method. BGMM is a clustering
 algorithm which, for some fixed number of n-dimensional Gaussian distributions,
@@ -82,10 +82,10 @@ distribution is maximized.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.45\textwidth]{src/figures/notebookFigures/DensityBinsDemo.png}
-	\label{fig:densityBinsDemo}
 	\caption{CMD where points are colored by density. Lines show the
 	density-color profile in each magnitude bin. In this figure adaptive
 	binning targeted 1000 stars per bin}
+	\label{densityBinsDemo}
 \end{figure}
 
 Maximization is preformed using the Dirichlet process, which is a
