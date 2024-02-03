@@ -1,4 +1,5 @@
-\documentclass[twocolumn,linenumbers]{src/aastex631}
+\documentclass[twocolumn]{aastex62}
+\pdfoutput=1
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand\aastex{AAS\TeX}
 \newcommand\latex{La\TeX}
@@ -83,31 +84,32 @@
 
 \keywords{Globular Clusters (656), Stellar evolutionary models (2046)}
 
-\input{src/sections/intro.tex}
+\input{intro.tex}
 
-\input{src/sections/AtmopshericModels.tex}
+\input{AtmopshericModels.tex}
 
-\input{src/sections/modeling.tex}
+\input{modeling.tex}
 
-\input{src/sections/fidanka.tex}
+\input{fidanka.tex}
 
-\input{src/sections/fitting.tex}
+\input{fitting.tex}
 
 % \input{src/sections/results.tex}
 
 % \input{src/sections/discussion.tex}
 
-\input{src/sections/conclusion.tex}
+\input{conclusion.tex}
 
 
-\begin{acknowledgments}
+\acknowledgments{
 	This work has made use of the NASA astrophysical data system (ADS). We
 	would like to thank Elisabeth Newton and Aaron Dotter for their support and
 	for useful disscusion related to the topic of this paper. Additionally, we
 	would like to thank Kara Fagerstrom, Aylin Garcia Soto, and Keighley
 	Rockcliffe for their useful disscusion related to in this work. We
 	acknowledge the support of a NASA grant (No. 80NSSC18K0634). 
-\end{acknowledgments}
+}
+\acknowledgments
 
 % \software{
 % 	The Dartmouth Stellar Evolution Program (DSEP) \citep{Dotter2008},
@@ -116,7 +118,7 @@
 % }
 
 
-\bibliography{src/bib/ms}{}
+\bibliography{ms}{}
 \bibliographystyle{aasjournal}
 
 
