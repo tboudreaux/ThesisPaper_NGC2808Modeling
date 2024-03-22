@@ -36,20 +36,20 @@ manuscript: ./src/$(ASSET_FILES)
 
 
 apj:
-	if [ -d "ApJ" ]; then rm -rf "ApJ"; fi
-	pubPolish --target ApJ --dest $(ApJDIR) $(MANPATH)
+	pubPolish --target ApJ --dest $(ApJDIR) $(MANPATH) -f
 	cd $(ApJDIR) && $(LTC) $(TFLAGS) $(MANFILE)
 	cd $(ApJDIR) && $(BTC) $(ANAME)
 	cd $(ApJDIR) && $(LTC) $(TFLAGS) $(MANFILE)
 	cd $(ApJDIR) && $(LTC) $(TFLAGS) $(MANFILE)
+	tar -czvf $(ApJDIR).tar.gz $(ApJDIR)
 
 arxiv:
-	if [ -d "ArXiv" ]; then rm -rf "ArXiv"; fi
-	pubPolish --target ArXiv --dest $(ArXivDIR) $(MANPATH)
+	pubPolish --target ArXiv --dest $(ArXivDIR) $(MANPATH) -f
 	cd $(ArXivDIR) && $(LTC) $(TFLAGS) $(MANFILE)
 	cd $(ArXivDIR) && $(BTC) $(ANAME)
 	cd $(ArXivDIR) && $(LTC) $(TFLAGS) $(MANFILE)
 	cd $(ArXivDIR) && $(LTC) $(TFLAGS) $(MANFILE)
+	tar -czvf $(ArXivDIR).tar.gz $(ArXivDIR)
 
 
 clean:

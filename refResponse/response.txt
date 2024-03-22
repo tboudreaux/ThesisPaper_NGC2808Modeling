@@ -1,0 +1,127 @@
+# Response to the referee for the paper titled
+# Chemically Self-Consistant Modeling of the Globular Cluster NGC 2808 and its Effects on the Inferred Helium abundance of Multiple Stellar Population.
+
+We thank the referee for their careful reading and critique of our work. Below
+we have attached a response to the referees comments enumerated in the same
+manner in which we recived the report. All changes to the text of the manuscript
+have been placed in boldface.
+
+# Comment 1 [Chromosome Maps]
+Referee:
+  Milone et al. 2015 and other groups identified five distinct populations in NGC
+  2808. To do so they used the chromosome map, a color-color combination of
+  filters (including F814W and F275W, the two filters used in this study). This
+  diagnostic tool was introduced to maximize the separation between stars with
+  different light-element abundances (different filters are in fact sensitive to
+  different light-elements), information which, as demonstrated, can only be
+  partially retrieved from a (F275W-F814W, F814W) CMD. The authors do not justify
+  the choice to use the (F275W-F814W, F814W) CMD, instead of the chromosome map.
+  Furthermore, although the authors only find two populations from their
+  analysis, they do not comment on why this is the case and, importantly, how
+  this compares with what Milone et al. 2015 and others found. Finally, it is
+  neither clear nor physically motivated why the method used in their work should
+  be a better method for identifying multiple populations than the chromosome
+  map. This is a crucial point and is completely missing.
+Response:
+  Overall, in response to this point, we have added text to the paper to
+  summarize why we elect to not make use of chromosome maps. The summary of
+  that additional text is that we do not belive we have an appropriate emough
+  handle on the uncertanties in the chromosome maps to allow us to make
+  statistically signifigant statements about population seperation. Due to the
+  manner in which chromosome maps are constructed the fractional uncertanties
+  of datapoints grow rapidly when compared to what they would be in on either a
+  color-magnitude diagram or color-color diagram. We investigate this and found
+  that the best-case (assuming no error on the red and blue fiducial line
+  positioning and only possion error on each magnitude measurment) mean
+  fractional error after computing a chromosome map was > 1. (See
+  https://algebrist.com/~tboudreaux/files/ChromosomeMapFractionalErrorDist.pdf
+  for the probability density distribution of fractional errors over the
+  chromosome map parameter space). Because Fidanka fundamentally finds clusters
+  based on a mean density derived from a monte carlo sampling of the error
+  space, such large uncertanties prevent fidanka from identifying clusters
+  reliably. CMD space does not face the same issues. It is true that we may be
+  sacrificing some of the light-element abundance-variation driven seperation
+  between potential stellar populations; however, as the aim of this work is to
+  identify if chemically-self consistent modeling has a signifigant affect on
+  the infered helium abundance it is not strictly nessisary to extract all
+  previously identified populations. Finally, as there has been recent
+  literature which questions whether there are in fact more than 2 populations
+  in NGC 2808 (Valle et al. 2022, based on spectroscopy) we feel that it would
+  be improper to not take an extremley careful handleing of clustering and
+  the uncertanties which play into it.
+
+Referee:
+  Although the authors state several times that the work adopts a chemically
+  self-consistent modeling of the globular cluster, it is not explained what
+  the improvement is in this work compared to previous ones. Furthermore, it is
+  not clear what the chemical composition of the two populations is (in terms
+  of [Fe/H], [O/Fe], [N/Fe] etc.) and what the motivation behind this choice
+  is. The authors refer to Milone et al. 2015 again but without further
+  explanation and it is not up to the reader to go and read that paper. The
+  paper must be comprehensive and all important information used must be
+  clearly mentioned and reported. Finally, that paper provides the chemical
+  content of the other three multiple populations (B, C and D). Why do the
+  authors specifically use the chemical content of population E? The
+  motivations for this are unclear, but very important.
+Response:
+  There has been text added to the manuscript to clarify what we mean by
+  chemically self-consistent. To summarize here, we mean that unlike the
+  majority of globular cluster modeling efforts we use high temperature
+  opacities, low temperature opacities, atmosphereic bounday conditions, and
+  structural compositons which all agree in their atmoic mass fractions up to
+  Zinc (with heavier elements being excluded as the OPLIB high-temperature
+  opacity tables we use have not been computed above zinc). This has been done,
+  to the best of our knowledge, for only one other cluster, NGC 6752 (Dotter et
+  al. 2015). That work showed that full chemical self-consistancy did not 
+  result in a signifigant change to the infered helium abundances. Here we
+  are essentially reproducing this work but for another cluster which has a more
+  extreme infered helium abundance in the literature. We also include text in the
+  paper to explain why we use populations A and in E in specific. These two populations
+  have the lowest and highest infered helium abundances respectivley and have been 
+  consitantly shown to be seperable in the NGC 2808 CMD. As we are focusing on 
+  determining if chemically self-consistent modeling will affect the infered helium 
+  abundance it makes sense to use the most extreme models. Finally, we have included
+  [Fe/H], [O/Fe], and [N/Fe] values for the two populations which we do use in the
+  text of the manuscript. 
+
+Referee:
+  Similar to the previous comment, the authors do not mention the literature
+  values adopted as first guess for the cluster age, distance and reddening.
+  They do not comment on whether there is agreement between these values and
+  the best-fit parameters. This, in my opinion, is fundamental to understand
+  whether the best-fit solution obtained is reliable or not.
+Response:
+  Text has been added to the manuscript stating what the initial guesses were
+  and how these values compare to the best fit parameters. The summary of this
+  is that the best fit parameters are multiple sigma removed from the initial
+  guess.
+
+Referee:
+  The best-fitting isochrones for Populations A and E in Table 1 have very
+  different mixing length parameters (2.050 vs 1.600). This difference has a
+  significant impact on the effective temperature (especially on the red giant
+  branch) and is not physically justified in the text. In fact, there is no
+  obvious reason to believe that two populations in the same cluster could have
+  such different mixing lengths. However, this has a huge effect on the results
+  obtained. Why didn't the authors set this parameter to be the same in both
+  isochrones? What would have been the results in this case?
+Response:
+  TBD
+
+Referee:
+  Some of the Figures they present are not easily readable and understandable,
+  of which Figure 6 is an example. It is not clear how to read the
+  uncertainties on the different parameters from this figure (which are not
+  even reported in Table 1). Furthermore, it is not explained in the text why
+  the authors use the ACS artificial star tests to derive these uncertainties,
+  when they could use the same Monte Carlo approach to make robust uncertainty
+  predictions for each of the parameters.
+Response:
+  TBD
+
+Referee:
+  While reading the paper I noticed several typos, truncated sentences and few
+  unanswered questions. The authors should read through the paper and clean up
+  these issues.
+Response:
+  We have gone through the manuscript and further copy-edited it.
