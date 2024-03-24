@@ -6,7 +6,7 @@ we have attached a response to the referees comments enumerated in the same
 manner in which we recived the report. All changes to the text of the manuscript
 have been placed in boldface.
 
-# Comment 1 [Chromosome Maps]
+# Comment 1 [Chromosome Maps] [TODO [ x ]]
 Referee:
   Milone et al. 2015 and other groups identified five distinct populations in NGC
   2808. To do so they used the chromosome map, a color-color combination of
@@ -50,6 +50,7 @@ Response:
   be improper to not take an extremley careful handleing of clustering and
   the uncertanties which play into it.
 
+# Comment 2 [Chemical Self-Consistency] [TODO [ x ]]
 Referee:
   Although the authors state several times that the work adopts a chemically
   self-consistent modeling of the globular cluster, it is not explained what
@@ -64,26 +65,29 @@ Referee:
   authors specifically use the chemical content of population E? The
   motivations for this are unclear, but very important.
 Response:
-  There has been text added to the manuscript to clarify what we mean by
-  chemically self-consistent. To summarize here, we mean that unlike the
-  majority of globular cluster modeling efforts we use high temperature
-  opacities, low temperature opacities, atmosphereic bounday conditions, and
-  structural compositons which all agree in their atmoic mass fractions up to
-  Zinc (with heavier elements being excluded as the OPLIB high-temperature
-  opacity tables we use have not been computed above zinc). This has been done,
-  to the best of our knowledge, for only one other cluster, NGC 6752 (Dotter et
-  al. 2015). That work showed that full chemical self-consistancy did not 
-  result in a signifigant change to the infered helium abundances. Here we
-  are essentially reproducing this work but for another cluster which has a more
-  extreme infered helium abundance in the literature. We also include text in the
-  paper to explain why we use populations A and in E in specific. These two populations
-  have the lowest and highest infered helium abundances respectivley and have been 
-  consitantly shown to be seperable in the NGC 2808 CMD. As we are focusing on 
-  determining if chemically self-consistent modeling will affect the infered helium 
-  abundance it makes sense to use the most extreme models. Finally, we have included
-  [Fe/H], [O/Fe], and [N/Fe] values for the two populations which we do use in the
-  text of the manuscript. 
+  By chemically self-consistent we mean that unlike the majority of globular
+  cluster modeling efforts we use high temperature opacities, low temperature
+  opacities, atmosphereic bounday conditions, and structural compositons which
+  all agree in their atmoic mass fractions up to Zinc (with heavier elements
+  being excluded as the OPLIB high-temperature opacity tables we use have not
+  been computed above zinc). This has been done, to the best of our knowledge,
+  for only one other cluster, NGC 6752 (Dotter et al. 2015). That work showed
+  that full chemical self-consistancy did not result in a signifigant change to
+  the infered helium abundances. Here we are essentially reproducing this work
+  but for another cluster which has a more extreme infered helium abundance in
+  the literature thus showing that the NGC 6752's lack of response to self
+  consistent models is not unique to that cluster and may be expected to be a
+  more general feature of the Galactic globular cluster population. We have
+  added text to this effect in the abstract of the manuscript. We also include
+  text in the paper to explain why we use populations A and in E in specific.
+  These two populations have the lowest and highest infered helium abundances
+  respectivley and have been consitantly shown to be seperable in the NGC 2808
+  CMD. As we are focusing on determining if chemically self-consistent modeling
+  will affect the infered helium abundance it makes sense to use the most
+  extreme models. Finally, we have included a table of abundance ratios for the
+  two populations which we use in the text of the manuscript. 
 
+# Comment 3 [Initial Guesses] [TODO [ ]]
 Referee:
   Similar to the previous comment, the authors do not mention the literature
   values adopted as first guess for the cluster age, distance and reddening.
@@ -96,6 +100,7 @@ Response:
   is that the best fit parameters are multiple sigma removed from the initial
   guess.
 
+# Comment 4 [Mixing Length Parameter] [TODO [ ]]
 Referee:
   The best-fitting isochrones for Populations A and E in Table 1 have very
   different mixing length parameters (2.050 vs 1.600). This difference has a
@@ -106,8 +111,16 @@ Referee:
   obtained. Why didn't the authors set this parameter to be the same in both
   isochrones? What would have been the results in this case?
 Response:
-  TBD
+  The mixing length traces the adiabicity of the upper atmosphere of a star,
+  encoding a complex, turbulent, 3D phenomenon. This adiabicity and the
+  turbulence should be strongly coupled to the mean molecular mass. The two
+  populations, A and E, have very different mean molecular masses due to the
+  dramatically enhanced helium abundance in population E. It is therefore not
+  suprising or at least not alarming that the mixing lengths are not in
+  agreement. We have added text to the manuscript clarifing that this
+  difference in best fit mixing lengths is not alarming.
 
+# Comment 5 [Figure Clarity] [TODO [ ]]
 Referee:
   Some of the Figures they present are not easily readable and understandable,
   of which Figure 6 is an example. It is not clear how to read the
@@ -119,6 +132,7 @@ Referee:
 Response:
   TBD
 
+# Comment 6 [Copy Editing] [TODO [ ]]
 Referee:
   While reading the paper I noticed several typos, truncated sentences and few
   unanswered questions. The authors should read through the paper and clean up
